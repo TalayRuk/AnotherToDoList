@@ -47,7 +47,7 @@ namespace ToDo
 // Authentication: Windows Authentication
 
     public static string dataSource = "Data Source=(localdb)\\mssqllocaldb"; // Data Source identifies the server.
-    public static string databaseName = "database"; // Initial Catalog is the database name
+    public static string databaseName = "todo"; // Initial Catalog is the database name
     //Integrated Security sets the security of the database access to the Windows user that is currently logged in.
     public static string ConnectionString = ""+dataSource+";Initial Catalog="+databaseName+";Integrated Security=SSPI;";
   }
