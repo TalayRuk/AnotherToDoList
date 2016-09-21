@@ -3,7 +3,6 @@ using Xunit;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using ToDo.Objects;
 using ToDo;
 
 
@@ -21,22 +20,26 @@ namespace ToDo
     [Fact]
     public void Test1_AreTestWork_true()
     {
+      //Arrange
       Task testTask = new Task("a");
-
+      //Assert
       Assert.Equal("a", testTask.GetDescription());
     }
     [Fact]
     public void Test2_IsTheDatabaseEmpty()
     {
+      //Act
      int AmountOfRows = Task.GetAll().Count;
+     //Assert
      Assert.Equal(0, AmountOfRows);
     }
     [Fact]
     public void Test3_IsDataOverRideWorks()
     {
+      //Arrange
       Task firstTask = new Task ("any");
       Task secondTask = new Task ("any");
-
+      //Assert
       Assert.Equal (firstTask, secondTask);
     }
     [Fact]
@@ -68,7 +71,7 @@ namespace ToDo
     public void Test6_Find_TaskInDatabase()
     {
       //Arrange
-      Tesk testTask = new Task("start code")
+      Task testTask = new Task("start code");
       //Act
       testTask.Save();
       //Assert

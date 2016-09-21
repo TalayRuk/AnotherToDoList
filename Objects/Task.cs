@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using ToDo;
 
-namespace ToDo.Objects
+
+namespace ToDo
 {
   public class Task
   {
@@ -114,7 +114,7 @@ namespace ToDo.Objects
       while (rdr.Read())
       {
         foundTaskId = rdr.GetInt32(0);
-        foundTaskDescription = rdr.Getstring(1);
+        foundTaskDescription = rdr.GetString(1);
       }
       Task foundTask = new Task(foundTaskDescription, foundTaskId);
 
@@ -126,7 +126,7 @@ namespace ToDo.Objects
       {
         conn.Close();
       }
-      
+
       return foundTask;
     }
 
