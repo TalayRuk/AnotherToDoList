@@ -2,3 +2,4 @@
   "parallelizeAssembly" : false,
   "parallelizeTestCollections" : false
 }
+//to prevent all tests running at same time
